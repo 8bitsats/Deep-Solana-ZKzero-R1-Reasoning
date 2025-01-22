@@ -1,0 +1,44 @@
+{
+  "model": {
+    "name": "solana-gpt2",
+    "type": "causal_lm",
+    "max_length": 512,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "repetition_penalty": 1.2
+  },
+  "training": {
+    "batch_size": 4,
+    "learning_rate": 5e-5,
+    "epochs": 3,
+    "warmup_steps": 500,
+    "weight_decay": 0.01,
+    "gradient_accumulation_steps": 4,
+    "logging_steps": 100,
+    "save_steps": 1000,
+    "eval_steps": 500
+  },
+  "compression": {
+    "min_proof_size": 1024,
+    "max_recursion_depth": 3,
+    "target_compression_ratio": 0.5,
+    "validation_threshold": 0.95
+  },
+  "paths": {
+    "model_artifacts": "./model_artifacts",
+    "weights": "./model_artifacts/weights",
+    "logs": "./model_artifacts/logs",
+    "compressed_proofs": "./compressed_proofs"
+  },
+  "metrics": {
+    "track_loss": true,
+    "track_accuracy": true,
+    "track_compression_ratio": true,
+    "track_validation_score": true
+  },
+  "hardware": {
+    "use_gpu": true,
+    "mixed_precision": true,
+    "num_workers": 4
+  }
+}
