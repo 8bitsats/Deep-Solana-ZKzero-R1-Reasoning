@@ -1,4 +1,4 @@
-# DeepSolana: Advanced Solana Blockchain AI Assistant
+# DeepSolana: A DeepSeek R1 Zero Advanced Reasoning Solana Blockchain AI Model
 
 DeepSolana is a specialized AI model fine-tuned on the DeepSeek-R1-Zero foundation model, designed specifically for the Solana blockchain ecosystem. This repository contains the training code, documentation, and research paper for the model.
 
